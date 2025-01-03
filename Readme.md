@@ -62,7 +62,7 @@ Create .env files in both the frontend and backend directories with the followin
 Backend .env:
 
 PORT=5000
-MONGODB_URI=your_mongodb_atlas_connection_string
+MONGODB_URI=mongodb+srv://mohammedriyazriyaz04:eZ8AlnyisnEu8KA3@cluster0.ynmkp.mongodb.net/
 
 Frontend .env:
 
