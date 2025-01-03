@@ -13,7 +13,10 @@ function Home() {
     showExplanation: false,
   });
   const { data: quiz, isLoading } = useQuery<Quiz>("quiz", async () => {
-    const response = await axios.get((import.meta as any).env.VITE_API_URL as string || "http://localhost:3000/api/quiz/current");
+    const response = await axios.get(
+      ((import.meta as any).env.VITE_API_URL as string) ||
+        "http://localhost:3000/api/quiz/current"
+    );
     return response.data || [];
   });
 
@@ -56,17 +59,17 @@ function Home() {
     <div className="min-h-screen bg-black py-8 px-4  ">
       <div className="w-full mx-auto bg-blue-500 rounded-lg shadow-xl p-6">
         <div className="flex bg-white p-5   text-center text-red-500 m-5 rounded-lg justify-center place-self-center">
-          <h1 className="text-xl  lg:text-4xl font-bold text-center mb-5">{quiz.title}</h1>
+          <h1 className="text-xl  lg:text-4xl font-bold text-center mb-5">
+            {quiz.title}
+          </h1>
         </div>
 
         <div className="flex flex-col rounded-lg lg:flex-row bg-white w-full">
-            
           <div className="bg-white p-5 flex flex-col w-full lg:w-3/4">
-          <h1 className="text-lg font-semibold lg:ml-52 text-center mb-5">
-                Quiz Title
-              </h1>
+            <h1 className="text-lg font-semibold lg:ml-52 text-center mb-5">
+              Quiz Title
+            </h1>
             <div className="mb-8">
-              
               <QuizQuestion
                 question={currentQuestion}
                 selectedAnswer={

@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const questionSchema = new mongoose.Schema({
   text: { type: String, required: true },
@@ -13,4 +13,4 @@ const quizSchema = new mongoose.Schema({
   createdAt: { type: Date, default: Date.now },
 });
 
-export const Quiz = mongoose.model('Quiz', quizSchema);
+export const Quiz = mongoose.model("Quiz", quizSchema);

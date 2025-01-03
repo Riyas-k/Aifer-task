@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import { cn } from '../utils/cn';
-import type { Question } from '../types/quiz';
-import React from 'react';
+import { useState } from "react";
+import { cn } from "../utils/cn";
+import type { Question } from "../types/quiz";
+import React from "react";
 
 interface QuizQuestionProps {
   question: Question;
@@ -20,30 +20,30 @@ export function QuizQuestion({
 }: QuizQuestionProps) {
   const getOptionStyle = (index: number) => {
     if (!showExplanation && selectedAnswer === index) {
-      return 'bg-blue-500 text-white';
+      return "bg-blue-500 text-white";
     }
     if (showExplanation) {
       if (index === question.correctAnswer) {
-        return 'bg-green-500 text-white';
+        return "bg-green-500 text-white";
       }
       if (selectedAnswer === index && index !== question.correctAnswer) {
-        return 'bg-red-500 text-white';
+        return "bg-red-500 text-white";
       }
     }
-    return 'bg-white hover:bg-gray-50';
+    return "bg-white hover:bg-gray-50";
   };
 
   return (
     <div className="space-y-4">
       <p className="text-lg font-medium">{question.text}</p>
-      
+
       <div className="space-y-2">
         {question.options.map((option, index) => (
           <button
             key={index}
             onClick={() => onSelectAnswer(index)}
             className={cn(
-              'w-full p-4 text-left rounded-lg shadow transition-colors',
+              "w-full p-4 text-left rounded-lg shadow transition-colors",
               getOptionStyle(index)
             )}
           >
