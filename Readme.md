@@ -52,7 +52,7 @@ Installation
 
 1. Clone the Repository
 
-git clone https://github.com/your-username/machine-test.git
+git clone https://github.com/Riyas-k/Aifer-task.git
 cd machine-test
 
 2. Set Up Environment Variables
@@ -66,18 +66,18 @@ MONGODB_URI=your_mongodb_atlas_connection_string
 
 Frontend .env:
 
-VITE_API_URL=http://localhost:5000
+VITE_API_URL=http://localhost:5173
 
 3. Install Dependencies
 
 Backend:
 
-cd backend
+cd server
 npm install
 
 Frontend:
 
-cd ../frontend
+cd client
 npm install
 
 Running the Application
@@ -89,7 +89,7 @@ npm run dev
 
 2. Start the Frontend Server
 
-cd ../frontend
+cd client
 npm run dev
 
 The application should now be running at http://localhost:3000.
